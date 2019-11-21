@@ -394,22 +394,18 @@ a:hover {
 
 	@media (min-width: $mdWidth){
 		position: absolute;
-		width: 20%;
-		top: 75%;
-		left: 85%;
+		top: 85%;
+		left: 80%;
 	}
 	@media (min-width: $lgWidth){
 		position: absolute;
-		width: 20%;
-		top: 75%;
+		top: 85%;
 		left: 80%;
 	}
 }
 
 .menu-btn-txt{
 	position: absolute;
-	text-align: center;
-	margin: 0 auto;
 	color: white;
 	font-family: 'Oswald', sans-serif;
 	font-size: 2em;
