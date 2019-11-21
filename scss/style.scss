@@ -352,7 +352,7 @@ a:hover {
 	background-size: cover;
 }
 
-.btn-container .banner-btn-reservation {
+ .banner-btn-reservation {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -367,7 +367,7 @@ a:hover {
 	cursor: pointer;
 	text-align: center;
 	background-color: hsla(360, 100%, 100%, 0.3);
-	padding: 0px 70px 10px 70px;
+	padding: 10px 70px 10px 70px;
 	z-index: +1;
 	@media screen and (min-width: $mdWidth){
 		font-size: 3em;
@@ -378,41 +378,49 @@ a:hover {
 
 }
 
-.btn-container .banner-btn-menu {
+ .banner-btn-menu {
 	position: absolute;
 	top: 30%;
 	left: 75%;
 	transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
-	text-shadow: $button-shadow;
-	color: white;
-	font-family: 'Oswald', sans-serif;
-	font-size: 2em;
 	border-radius: 2px;
 	border: none;
 	cursor: pointer;
-	text-align: center;
 	background-color: hsla(360, 100%, 100%, 0.2);
 	border: 5px solid white;
-	padding: 0px 70px 10px 70px;
-	z-index: +1;
+	padding: 10px 70px 10px 70px;
+	z-index: +1000;
 
 	@media (min-width: $mdWidth){
 		position: absolute;
-		width: 25%;
-		top: 70%;
+		width: 20%;
+		top: 75%;
 		left: 85%;
-		font-size: 3em;
 	}
 	@media (min-width: $lgWidth){
 		position: absolute;
-		width: 15%;
-		top: 60%;
+		width: 20%;
+		top: 75%;
 		left: 80%;
-		font-size: 3em;
 	}
 }
 
+.menu-btn-txt{
+	position: absolute;
+	text-align: center;
+	margin: 0 auto;
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	font-size: 2em;
+	text-shadow: $button-shadow;
+	@media (min-width: $mdWidth){
+		font-size: 3em;
+	}
+	@media (min-width: $lgWidth){
+		font-size: 3em;
+	}
+}
 
 .btn-container .btn:hover {
 	background-color: hsla(360, 100%, 100%, 0.45);
@@ -470,7 +478,6 @@ a:hover {
 	border: 5px double white;
 	font-size: 1.75em !important;
 	text-shadow: $text-shadow;
-	background-color:  #F2F2F2;
 }
 
 .submit:hover{
