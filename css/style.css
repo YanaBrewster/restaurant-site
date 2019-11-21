@@ -496,7 +496,14 @@ a:hover {
       left: 65%; } }
 
 .btn-container {
-  position: relative; }
+  position: relative;
+  margin-bottom: 2%; }
+  @media screen and (min-width: 600px) {
+    .btn-container {
+      margin-bottom: 0px; } }
+  @media screen and (min-width: 960px) {
+    .btn-container {
+      margin-bottom: 0px; } }
 
 .btn-container img {
   width: 100%;
@@ -527,42 +534,27 @@ a:hover {
     .banner-btn-reservation {
       font-size: 3em; } }
 
-.banner-btn-menu {
-  position: absolute;
-  top: 30%;
-  left: 75%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  border-radius: 2px;
-  border: none;
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.2);
-  border: 5px solid white;
-  padding: 10px 70px 10px 70px;
-  z-index: +1000; }
-  @media (min-width: 600px) {
-    .banner-btn-menu {
-      position: absolute;
-      top: 85%;
-      left: 80%; } }
-  @media (min-width: 960px) {
-    .banner-btn-menu {
-      position: absolute;
-      top: 85%;
-      left: 80%; } }
-
-.menu-btn-txt {
-  position: absolute;
+.menu-btn {
   color: white;
   font-family: 'Oswald', sans-serif;
-  font-size: 2em;
-  text-shadow: 2px 2px 4px #202020; }
+  font-size: 1.5em;
+  text-shadow: 2px 2px 4px #202020;
+  border-radius: 2px;
+  background-color: rgba(153, 204, 153, 0.6);
+  border: 5px solid white;
+  padding: 10px 70px 10px 70px; }
   @media (min-width: 600px) {
-    .menu-btn-txt {
-      font-size: 3em; } }
+    .menu-btn {
+      background-color: rgba(255, 255, 255, 0.2);
+      font-size: 2em;
+      color: white;
+      border: 5px solid white; } }
   @media (min-width: 960px) {
-    .menu-btn-txt {
-      font-size: 3em; } }
+    .menu-btn {
+      font-size: 2em;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: 5px solid white; } }
 
 .btn-container .btn:hover {
   background-color: rgba(255, 255, 255, 0.45);
