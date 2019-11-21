@@ -1,0 +1,58 @@
+$columns: 12;
+$columnWidth: 100% / $columns;
+
+$mdWidth: 600px;
+$lgWidth: 960px;
+
+$brand-color: #99CC99;
+
+// SHADOWS
+
+$text-shadow: 1px 1px 1px #CCC;
+$button-shadow: 2px 2px 4px #202020;
+
+
+// GRID
+
+.row {
+    &::after{
+        clear: both;
+        display: block;
+        content: '';
+    }
+}
+
+.col {
+    float: left;
+}
+
+@for $i from 1 through $columns{
+    .col#{$i}{
+        width: $columnWidth * $i;
+    }
+    .offset#{$i}{
+            margin-left:$columnWidth * $i;
+    }
+}
+
+@media screen and (min-width: $mdWidth){
+    @for $i from 1 through $columns{
+        .colM#{$i}{
+            width: $columnWidth * $i;
+        }
+        .offsetM#{$i}{
+            margin-left:$columnWidth * $i;
+        }
+    }
+}
+
+@media screen and (min-width: $lgWidth){
+    @for $i from 1 through $columns{
+        .colL#{$i}{
+            width: $columnWidth * $i;
+        }
+        .offsetL#{$i}{
+            margin-left:$columnWidth * $i;
+        }
+    }
+}

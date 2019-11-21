@@ -1,0 +1,497 @@
+@import 'variables';
+@import 'mixins';
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+*{
+	box-sizing:border-box;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+//ICONS
+
+.fa-phone{
+	color: white;
+	font-size: 2em;
+	@media (max-width: $mdWidth){
+		font-size: 1em;
+	}
+}
+
+.img__reviews--center img{
+	text-align: center;
+	margin: 0 auto;
+}
+
+.fb-logo img{
+	float: right;
+	margin-right: 5%;
+	@media (max-width: $mdWidth){
+		float: left;
+		margin-left: 20%;
+	}
+}
+
+// IMAGES
+
+.reviews--center img{
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+}
+
+.menu-items img{
+	width: 100%;
+	text-align: center;
+}
+
+.review--stars img{
+	width: 50%;
+}
+
+
+// IFRAME
+
+iframe{
+	border: none;
+	width: 100%;
+	height: 400px;
+}
+
+// COLOUR
+
+.bg-color--gray{
+	background-color: #F2F2F2;
+	z-index: -1;
+}
+
+.brand-color {
+	background-color: $brand-color;
+}
+
+// TEXT
+
+p {
+	@include text-body;
+	font-size: 1.25em;
+	padding: 2%;
+}
+
+.p__center p{
+	text-align: center;
+	display:block;
+	margin:0 auto;
+}
+
+// HEADINGS
+
+h2{
+	@include headings;
+	font-size: 3em;
+	padding: 2%;
+}
+
+h3{
+	@include headings;
+	font-size: 2.5em;
+	text-align: center;
+}
+
+h4{
+	@include headings;
+	font-size: 2em;
+	text-align: left;
+	padding: 2%;
+}
+
+
+.card{
+	text-align: center;
+	h4{
+		text-align: center;
+	}
+	p{
+		margin: 0 auto;
+	}
+}
+
+// ROW, COL AND PAGE CONTAINER
+
+.page-container {
+	@include clear;
+}
+
+.row{
+	&::after{
+		@include clear;
+	}
+}
+
+.row--no-padding{
+	margin-bottom: 0px;
+}
+
+.col{
+	float: left;
+}
+
+
+// NAVIGATION
+
+.navigation {
+	height: 13%;
+	@media screen and (min-width: $mdWidth){
+		height: 18%;
+	}
+	@media screen and (min-width: $lgWidth){
+		height: 15%;
+	}
+}
+
+.nav__fixed{
+	// overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1
+}
+
+#logo{
+	padding-top: 4%;
+	margin-left: 4%;
+	width: 100%;
+}
+
+#list {
+	float: right;
+	margin-right: 4%;
+	padding-top: 1%;
+	ul{
+		list-style: none;
+	}
+	li{
+		display: inline-block;
+		float: left;
+		font-family: 'Oswald', sans-serif;
+		text-transform: lowercase;
+		font-size: 3em;
+		margin: 0 8px;
+		text-shadow: $text-shadow;
+
+		@media screen and (min-width: $mdWidth){
+			display: inline-block !important;
+			font-size: 2em;
+			margin: 0 12px;
+			padding-top: 1%;
+			color: white;
+			#navActive, li:active, {
+				border-bottom: 3px solid $brand-color;
+			}
+		}
+		@media screen and (min-width: $lgWidth){
+			display: inline-block !important;
+			font-size: 2.5em;
+			margin: 0 12px;
+			padding-top: 1%;
+			color: white;
+			#navActive, li:hover, {
+				border-bottom: 3px solid $brand-color;
+			}
+		}
+	}
+
+	a:hover, #nav__active {
+		border-bottom: 3px solid white;
+	}
+}
+
+#menu-icon{
+	display: none;
+}
+
+// MOBILE/TABLET NAVIGATION
+
+@media screen and (max-width: $lgWidth){
+
+	#menu-icon{
+		display: block;
+		padding-top: 4%;
+		margin-right: 5%;;
+		float: right;
+		color: white;
+		font-size: 3.3em;
+		@media screen and (min-width: $mdWidth){
+			margin-right: 5%;;
+		}
+	}
+
+	#list{
+		display: none;
+		float: right;
+		clear: both;
+		background-color: $brand-color;
+		width: 100%;
+		padding: 1% 5% 5% 5%;
+		height: 20%;
+
+	}
+
+	#list ul li{
+		display: block;
+		float: none;
+		padding-top: 1%;
+		font-size: 1.875em;
+	}
+}
+
+// FOOTER
+
+.p__footer--left p{
+	display: inline-block;
+	float: left;
+	margin-left: 3%;
+	color: white;
+	width: 100%;
+	text-align: left;
+	font-size: 1em;
+	text-shadow: $text-shadow;
+}
+
+.p__footer--middle p{
+	display: inline-block;
+	float: left;
+	color: white;
+	text-align: center;
+	font-size: 1em;
+	text-shadow: $text-shadow;
+	margin-left: 1%;
+	@media (max-width: $mdWidth){
+		display: none;
+	}
+}
+
+.p__footer--right p{
+	padding-top: 0px !important;
+	display: inline-block;
+	float: right;
+	color: white;
+	text-align: right;
+	font-size: 1em;
+	text-shadow: $text-shadow;
+}
+
+
+.footer {
+	padding-top: 2%;
+	bottom: 0;
+	height: 5%;
+	width: 100%;
+	padding-bottom: 2%;
+	@media (max-width: $mdWidth){
+		padding-top: 3%;
+		padding-bottom: 3%;
+	}
+}
+
+// LINKS
+
+a:link {
+	color: white;
+}
+
+a:visited {
+	color: white;
+}
+
+a:hover {
+	color: white;
+}
+
+// BANNERS
+
+.banner{
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.banner-text p{
+	font-size: 1.25em;
+	margin: 0 auto;
+	text-align: center;
+	width: 80%;
+	@media (min-width: $mdWidth){
+		font-size: 1.25em;
+		position: absolute;
+		text-align: center;
+		width: 35%;
+		top: 7%;
+		left: 65%;
+	}
+	@media (min-width: $lgWidth){
+		font-size: 1.5em;
+		position: absolute;
+		text-align: center;
+		width: 30%;
+		top: 25%;
+		left: 65%;
+	}
+}
+
+// BANNER BUTTON
+
+
+.btn-container {
+	position: relative;
+}
+
+.btn-container img {
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.btn-container .banner-btn-reservation {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-shadow: $button-shadow;
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	font-size: 2em;
+	border-radius: 2px;
+	border: 5px solid white;
+	cursor: pointer;
+	text-align: center;
+	background-color: hsla(360, 100%, 100%, 0.3);
+	padding: 0px 70px 10px 70px;
+	z-index: +1;
+	@media screen and (min-width: $mdWidth){
+		font-size: 3em;
+	}
+	@media screen and (min-width: $lgWidth){
+		font-size: 3em;
+	}
+
+}
+
+.btn-container .banner-btn-menu {
+	position: absolute;
+	top: 30%;
+	left: 75%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-shadow: $button-shadow;
+	color: white;
+	font-family: 'Oswald', sans-serif;
+	font-size: 2em;
+	border-radius: 2px;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+	background-color: hsla(360, 100%, 100%, 0.2);
+	border: 5px solid white;
+	padding: 0px 70px 10px 70px;
+	z-index: +1;
+
+	@media (min-width: $mdWidth){
+		position: absolute;
+		width: 25%;
+		top: 70%;
+		left: 85%;
+		font-size: 3em;
+	}
+	@media (min-width: $lgWidth){
+		position: absolute;
+		width: 15%;
+		top: 60%;
+		left: 80%;
+		font-size: 3em;
+	}
+}
+
+
+.btn-container .btn:hover {
+	background-color: hsla(360, 100%, 100%, 0.45);
+	color: white;
+}
+
+// MENU PAGE BUTTON
+
+.menu--small .btn {
+  text-align: center;
+  background-color: $brand-color;
+  font-size: 2em;
+  color: white;
+  text-shadow: $text-shadow;
+	font-family: 'Oswald', sans-serif;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  border-radius: 50px;
+  border: 0px;
+	width: 40%;
+  padding: 1%;
+  margin: 0 auto;
+}
+
+.menu--small .btn:hover{
+  opacity: 0.6;
+}
+
+.reservation--form{
+	padding: 1%;
+		font-family: 'Oswald', sans-serif;
+		font-size: 1.25em;
+	input{
+		font-family: 'Oswald', sans-serif;
+		font-size: 1em;
+		margin-top: 1%;
+		margin-bottom: 1%;
+		width: 60%;
+		padding-left: 1%;
+		@media (max-width: $mdWidth) {
+			width: 100%;
+		}
+	}
+	select{
+		font-family: 'Oswald', sans-serif;
+		font-size: 1em;
+		margin-top: 1%;
+		margin-bottom: 1%;
+	}
+}
+
+.submit{
+	padding: 2%;
+	border: 5px double white;
+	font-size: 1.75em !important;
+	text-shadow: $text-shadow;
+	background-color:  #F2F2F2;
+}
+
+.submit:hover{
+  background-color:  $brand-color;
+	color: white;
+	opacity: 0.6;
+}
+
+
+// PADDING/MARGIN
+
+.padding--bottom{
+	padding-bottom: 3%;
+}
+
+.padding--top{
+	padding-top: 3%;
+}
+
+// BOX
+
+.box{
+	height: 400px;
+}

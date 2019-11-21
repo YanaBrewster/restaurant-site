@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservations | Dockside | Queens Wharf Restaurant &amp; Bar</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
+</head>
+<body>
+  <header>
+    <div class="row">
+      <div class="col col12 colM12 colL12 brand-color navigation">
+        <div class="col col9 colM6 colL3">
+          <img id="logo" src="images/logo.png" alt="dockside logo"/>
+        </div>
+
+        <div id="menu-icon" onclick="showNav()">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <div id="list">
+          <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="menu.html">menu</a></li>
+            <li><a href="reservations.html" id="nav__active" >reservations</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="row padding--top">
+    <div class="col col12 colM6 colL5 offsetL1">
+      <h2>Reservations</h2>
+      <p>
+        Book your table with our online booking form below.
+        <br>
+        If you have a group of 12 or more, a voucher, special request <br>or wish to dine on our Degustation menu please contact us directly on the phone number below.
+        <br>  <br>
+        CALL US: 04 499 9900  <br>
+        EMAIL US: DINE@DOCKSIDENZ.COM <br>
+        ADDRESS: Shed 3 Queens Wharf, Wellington  <br>
+        HOURS: Monday - Sunday, 11am-10pm
+      </p>
+    </div>
+    <div class="col col12 colM12 colL6">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11992.455747216065!2d174.7794884!3d-41.2846247!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4c20899db07ffec3!2sDockside+Restaurant+%26+Bar!5e0!3m2!1sen!2snz!4v1553042950316"></iframe>
+    </div>
+  </div>
+  <div class="row padding--top">
+    <div class="col col12 colM12 colL5 offsetL1">
+      <h4>Make a reservation</h4>
+      <form id="contactForm" class="reservation--form padding--bottom">
+        <h5>Full Name:</h5>
+        <input type="text" class="" placeholder="Enter Full Name" id="nameInput"/>
+        <h5>Date:</h5>
+        <input type="date" name="date">
+        <h5>No. of people:</h5>
+        <input type="number" class=""  placeholder=" Enter Number of People" id="peopleInput">
+        <h5>Time:</h5>
+        <select name="time">
+          <option value="5pm">5pm</option>
+          <option value="6pm">6pm</option>
+          <option value="7pm">7pm</option>
+          <option value="8pm">8pm</option>
+        </select>
+        <h5>Email:</h5>
+        <input type="email" class="" placeholder="Enter Email" id="emailInput"/>
+        <h5>Phone Number:</h5>
+        <input type="number" class=""  placeholder=" Enter Phone Number" id="phoneInput">
+        <div class="" >
+          <input type="submit" name="submit" value="submit"  class="submit">
+        </div>
+      </form>
+
+    </div>
+    <div class="col col12 colM12 colL6 btn-container">
+      <img src="images/Dockside.jpg" alt="http://www.docksidenz.com dockside building"/>
+    </div>
+  </div>
+
+
+
+  <footer>
+    <div class="row">
+      <div class="footer col col12 colM12 colL12 brand-color">
+        <div class="col col6 colM5 colL5 p__footer--left">
+          <p>
+            <b>Shed 3 Queens Wharf, Wellington</b> | Open Monday - Sunday, 11am-10pm
+          </p> <br>
+        </div>
+        <div class= "col colM2 colL3 p__footer--middle">
+
+          <p>
+            Dockside Restaurant &amp; Bar &copy; 2019
+          </p>
+
+        </div>
+        <div class="col col4 colM3 colL2 p__footer--right">
+          <p>
+            <i class="fas fa-phone"></i> (04) 499 9900 <br>
+          </p>
+        </div>
+        <div class="col col2 colM2 colL2 fb-logo">
+          <a href="https://www.facebook.com/docksidenz"></a>
+          <img alt="facebook" src="images/fLogo.png">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/jquery-3.3.1.js"> </script>
+  <script src="js/script.js"></script>
+</body>
+</html>
