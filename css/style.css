@@ -536,8 +536,9 @@ a:hover {
 
 .menu-btn {
   color: white;
+  width: 50%;
   font-family: 'Oswald', sans-serif;
-  font-size: 1.5em;
+  font-size: 2em;
   text-shadow: 2px 2px 4px #202020;
   border-radius: 2px;
   background-color: rgba(153, 204, 153, 0.6);
@@ -546,12 +547,14 @@ a:hover {
   @media (min-width: 600px) {
     .menu-btn {
       background-color: rgba(255, 255, 255, 0.2);
+      width: 20%;
       font-size: 2em;
       color: white;
       border: 5px solid white; } }
   @media (min-width: 960px) {
     .menu-btn {
       font-size: 2em;
+      width: 20%;
       background-color: rgba(255, 255, 255, 0.2);
       color: white;
       border: 5px solid white; } }
